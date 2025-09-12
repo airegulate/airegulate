@@ -25,7 +25,9 @@
 
     .sidebar img {
       width: 100%;
+      max-width: 200px;
       margin-bottom: 20px;
+      border-radius: 4px;
     }
 
     .sidebar h2 {
@@ -81,6 +83,41 @@
     .main ul li {
       margin-bottom: 8px;
     }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    form input[type="submit"] {
+      background-color: #1f2a44;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #2c3b5f;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #1f2a44;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    .download-btn:hover {
+      background-color: #2c3b5f;
+    }
   </style>
 </head>
 <body>
@@ -130,11 +167,19 @@
         <li>Financial Services</li>
       </ul>
 
-      <h2>Contact</h2>
+      <h2>Contact Form</h2>
+      <form action="mailto:ai.regulate@outlook.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="email" name="email" placeholder="Your Email">
+        <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+
+      <h2>Download Capability Statement</h2>
       <p>
-        For pilot engagement, capability statements, or procurement alignment:<br>
-        📧 <strong>ai.regulate@outlook.com</strong>
+        Our capability statement outlines our consulting services, software offering, and procurement alignment. It’s tailored for government buyers and available for download:
       </p>
+      <a href="your-capability-statement.pdf" download class="download-btn">Download PDF</a>
     </div>
   </div>
 </body>
